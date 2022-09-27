@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import search from "../../assets/magnifying-glass-solid.svg";
 import Avatar from "../Avatar/Avatar";
-import Button from "../Button/Button";
+
 import "../Navbar/Navbar.css";
 export const Navbar = () => {
   var user = null;
@@ -36,10 +36,10 @@ export const Navbar = () => {
           </Link>
         ) : (
           <>
-            <Link to="/">
-              <Avatar>M</Avatar>
-            </Link>
-            <Button>Log out</Button>
+            
+              <Avatar backgroundColor='#009dff' px="10px" py="7px" borderRadius="50%" color='white'><Link to ="/" style={{color:"white", textDecoration:'none'}}>M</Link></Avatar>
+          
+            <button className="nav-item nav-links">Log out</button>
           </>
         )}
       </div>
